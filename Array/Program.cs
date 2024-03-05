@@ -1,26 +1,26 @@
-﻿// See https://aka.ms/new-console-template for more information
-using Array;
+﻿using Array;
+using System.Diagnostics;
 
-Console.WriteLine("Hello, World!");
-int[] array = new int[10];
+int arrayLength = 10; // Define the length of the array
+int[] array = new int[arrayLength];
+int filledElements = 7; // Example: assume 5 elements are already filled
 
-int filledElementsIndex=0;
-//Filling elements till 5th index
-for(int i=0; i<5; i++)
+// Populate the array with some initial values
+for (int i = 0; i < filledElements; i++)
 {
-    array[i] = i+1;
-    filledElementsIndex=i;
-
+    array[i] = i + 1; // Filling the array with values 1, 2, 3, 4, 5
 }
 
 ArrayFunctions functions = new ArrayFunctions();
 
-//Traverse elements of an array
+// Display the array before insertion
+Console.WriteLine("Array before insertion:");
 functions.PrintAllElemntsInAnArray(array);
 
-//Add element at nth index
-functions.InsertElement(array, 3, 7, filledElementsIndex);
-filledElementsIndex++;
+// Insert an element at the 3rd index (index 2)
+int elementToAdd = 10;
+int insertIndex = 2;
 
-//functions.InsertElement(array, 3, 9, filledElementsIndex);
+functions.InsertElementAtIndex(array, insertIndex, elementToAdd, ref filledElements);
 
+functions.DeleteElementAtIndex(array, 4, ref filledElements);
