@@ -24,3 +24,5 @@ int insertIndex = 2;
 functions.InsertElementAtIndex(array, insertIndex, elementToAdd, ref filledElements);
 
 functions.DeleteElementAtIndex(array, 4, ref filledElements);
+
+functions.BinarySearch(array, 6);

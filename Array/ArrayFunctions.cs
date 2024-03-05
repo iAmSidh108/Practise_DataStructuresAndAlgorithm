@@ -52,6 +52,17 @@ namespace Array
             Console.WriteLine($"The element at {index} index is deleted");
         }
 
+        public void BinarySearch(int[] array, int elementsToSearch)
+        {
+            for(int i=0; i<array.Length-1; i++)
+            {
+                if (array[i] == elementsToSearch)
+                {
+                    Console.WriteLine($"{elementsToSearch} is found at {i} index");
+                }
+            }
+        }
+
 
     }
 }
