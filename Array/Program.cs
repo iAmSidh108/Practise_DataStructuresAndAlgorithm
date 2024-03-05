@@ -3,7 +3,7 @@ using System.Diagnostics;
 
 int arrayLength = 10; // Define the length of the array
 int[] array = new int[arrayLength];
-int filledElements = 7; // Example: assume 5 elements are already filled
+int filledElements = 7; // Example: assume 7 elements are already filled
 
 // Populate the array with some initial values
 for (int i = 0; i < filledElements; i++)
@@ -30,11 +30,11 @@ functions.DeleteElementAtIndex(array, 4, ref filledElements);
 functions.LinearSearch(array, 6);
 
 //Arranging/Sortng eleements in Ascending
-functions.BubbleSortElementsinAscending(array, ref filledElements);
+//functions.BubbleSortElementsinAscending(array, ref filledElements);
 
 //Arranging/Sortng eleements in Descending
-functions.BubbleSortElementsinDescending(array, ref filledElements);
+//functions.BubbleSortElementsinDescending(array, ref filledElements);
 
-functions.BinarySearchAscending(array, ref filledElements, 2);
-
-functions.BinarySearchDescending(array,ref filledElements, 2);
+//Binary Search
+int result = functions.BinarySearch(array, ref filledElements, 10);
+functions.BinarySearchResult(result);
