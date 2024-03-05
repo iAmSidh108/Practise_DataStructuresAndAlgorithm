@@ -15,6 +15,8 @@ namespace Array
             Console.WriteLine();
         }
 
+
+
         public void InsertElementAtIndex(int[] array, int index, int elementToAdd, ref int filledIndex)
         {
             if (filledIndex >= array.Length || index < 0 || index > array.Length - 1)
@@ -205,6 +207,9 @@ namespace Array
                 Console.WriteLine($"Elements found at {result} index.");
             }
         } 
+
+        
+
 
     }
 }
