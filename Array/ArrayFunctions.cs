@@ -1,4 +1,5 @@
-﻿using System.Diagnostics;
+﻿using System;
+using System.Collections;
 
 namespace Array
 {
@@ -33,6 +34,7 @@ namespace Array
 
             PrintAllElemntsInAnArray(array);
             Console.WriteLine($"The element {elementToAdd} is added at {index} index.");
+            Console.WriteLine();
         }
 
         public void DeleteElementAtIndex(int[] array, int index, ref int filledIndex)
@@ -50,6 +52,7 @@ namespace Array
 
             PrintAllElemntsInAnArray(array);
             Console.WriteLine($"The element at {index} index is deleted");
+            Console.WriteLine();
         }
 
         public void BinarySearch(int[] array, int elementsToSearch)
@@ -61,7 +64,53 @@ namespace Array
                     Console.WriteLine($"{elementsToSearch} is found at {i} index");
                 }
             }
+            Console.WriteLine();
         }
+
+        public void BubbleSortElementsinAscending(int[] array, ref int filledIndex)
+        {
+            for (int i = 0; i < filledIndex - 1; i++)
+            {
+                for (int j = 0; j < filledIndex - i - 1; j++)
+                {
+                    if (array[j] > array[j + 1])
+                    {
+                        // Swap elements if they are in the wrong order
+                        int temp = array[j];
+                        array[j] = array[j + 1];
+                        array[j + 1] = temp;
+                    }
+                }
+            }
+
+
+            PrintAllElemntsInAnArray(array);
+            Console.WriteLine("The elements are sorted in ascending order.");
+            Console.WriteLine();
+        }
+
+        public void BubbleSortElementsinDescending(int[] array, ref int filledIndex)
+        {
+            for (int i = 0; i < filledIndex - 1; i++)
+            {
+                for (int j = 0; j < filledIndex - i - 1; j++)
+                {
+                    if (array[j] < array[j + 1])
+                    {
+                        // Swap elements if they are in the wrong order
+                        int temp = array[j];
+                        array[j] = array[j + 1];
+                        array[j + 1] = temp;
+                    }
+                }
+            }
+
+            PrintAllElemntsInAnArray(array);
+            Console.WriteLine("The elements are sorted in descending order.");
+            Console.WriteLine();
+        }
+
+
 
 
     }

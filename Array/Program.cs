@@ -23,6 +23,14 @@ int insertIndex = 2;
 
 functions.InsertElementAtIndex(array, insertIndex, elementToAdd, ref filledElements);
 
+//Delete element at index n
 functions.DeleteElementAtIndex(array, 4, ref filledElements);
 
+//Binary Searching an array
 functions.BinarySearch(array, 6);
+
+//Arranging/Sortng eleements in Ascending
+functions.BubbleSortElementsinAscending(array, ref filledElements);
+
+//Arranging/Sortng eleements in Descending
+functions.BubbleSortElementsinDescending(array, ref filledElements);
