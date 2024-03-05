@@ -35,7 +35,22 @@ namespace Array
             Console.WriteLine($"The element {elementToAdd} is added at {index} index.");
         }
 
-        
+        public void DeleteElementAtIndex(int[] array, int index, ref int filledIndex)
+        {
+            // Shift remaining elements one index below the deleted position
+            for (int i = index; i < filledIndex - 1; i++)
+            {
+                array[i] = array[i + 1];
+            }
+
+            // Clear the last element to signify the deletion
+            array[filledIndex - 1] = 0;
+
+            filledIndex--;
+
+            PrintAllElemntsInAnArray(array);
+            Console.WriteLine($"The element at {index} index is deleted");
+        }
 
 
     }
