@@ -204,7 +204,7 @@ namespace Array
             }
             else
             {
-                Console.WriteLine($"Elements found at {result} index.");
+                Console.WriteLine($"Elements found at {result} index.\n");
             }
         } 
 
