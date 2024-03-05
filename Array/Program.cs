@@ -27,10 +27,14 @@ functions.InsertElementAtIndex(array, insertIndex, elementToAdd, ref filledEleme
 functions.DeleteElementAtIndex(array, 4, ref filledElements);
 
 //Binary Searching an array
-functions.BinarySearch(array, 6);
+functions.LinearSearch(array, 6);
 
 //Arranging/Sortng eleements in Ascending
 functions.BubbleSortElementsinAscending(array, ref filledElements);
 
 //Arranging/Sortng eleements in Descending
 functions.BubbleSortElementsinDescending(array, ref filledElements);
+
+functions.BinarySearchAscending(array, ref filledElements, 2);
+
+functions.BinarySearchDescending(array,ref filledElements, 2);
