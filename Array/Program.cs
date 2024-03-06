@@ -1,9 +1,11 @@
 ﻿using Array;
 
-int arrayLength = 10; // Define the length of the array
+/*int arrayLength = 10; // Define the length of the array
 int[] array = new int[arrayLength];
 int filledElements = 7; // Example: assume 7 elements are already filled
 
+
+List<int> list = new List<int>();
 // Populate the array with some initial values
 for (int i = 0; i < filledElements; i++)
 {
@@ -49,6 +51,19 @@ palindromeCheck.PalindromeCheckFunction(numToCheck);
 //Armstrong Check
 ArmstrongCheck armstrongCheck = new ArmstrongCheck();
 armstrongCheck.ArmstrongCheckFunction(numToCheck);
+
+*/
+
+_66PlusOne test=new _66PlusOne();
+int[] array = { 9, 8, 7, 6, 5, 4, 3, 2, 1, 0 };
+int[] newArray = test.PlusOne(array);
+
+foreach (int i in newArray)
+{
+    Console.Write(" "+i);
+}
+
+
 
 
 
