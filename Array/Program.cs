@@ -64,11 +64,21 @@
 //}
 
 
-//LeetCode question number 26 
-int[] array = {1, 1, 2};
-_26_RemoveDuplicate test=new _26_RemoveDuplicate();
-int sol=test.RemoveDuplicates(array);
-Console.WriteLine(sol);
+////LeetCode question number 26 
+//int[] array = {1, 1, 2};
+//_26_RemoveDuplicate test=new _26_RemoveDuplicate();
+//int sol=test.RemoveDuplicates(array);
+//Console.WriteLine(sol);
+
+//LeetCode Question number 350 Intersection of Two Arrays II
+int[] nums1 = [4, 9, 5]; 
+int[] nums2 = [9, 4, 9, 8, 4];
+_350_IntersectionofTwoArraysII test = new _350_IntersectionofTwoArraysII();
+int[] sol = test.Intersect(nums1, nums2);
+foreach(int x in sol)
+{
+    Console.Write(x+" ");
+}
 
 
 
