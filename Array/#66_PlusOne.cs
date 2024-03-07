@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Array
 {
-    public class _66PlusOne
+    public class _66_PlusOne
     {
         public int[] PlusOne(int[] digits)
         {
