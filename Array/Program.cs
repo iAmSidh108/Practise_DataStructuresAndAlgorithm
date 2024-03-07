@@ -1,4 +1,4 @@
-﻿using Array;
+﻿using Array.LeetCode;
 
 //int arrayLength = 10; // Define the length of the array
 //int[] array = new int[arrayLength];
@@ -70,15 +70,23 @@
 //int sol=test.RemoveDuplicates(array);
 //Console.WriteLine(sol);
 
-//LeetCode Question number 350 Intersection of Two Arrays II
-int[] nums1 = [4, 9, 5]; 
-int[] nums2 = [9, 4, 9, 8, 4];
-_350_IntersectionofTwoArraysII test = new _350_IntersectionofTwoArraysII();
-int[] sol = test.Intersect(nums1, nums2);
-foreach(int x in sol)
-{
-    Console.Write(x+" ");
-}
+////LeetCode Question number 350 Intersection of Two Arrays II
+//int[] nums1 = [4, 9, 5]; 
+//int[] nums2 = [9, 4, 9, 8, 4];
+//_350_IntersectionofTwoArraysII test = new _350_IntersectionofTwoArraysII();
+//int[] sol = test.Intersect(nums1, nums2);
+//foreach(int x in sol)
+//{
+//    Console.Write(x+" ");
+//}
+
+//Leetcode Question number #136 Single Number
+int[] nums1 = [4, 1, 2, 1, 2];
+_136_SingleNumber test=new _136_SingleNumber();
+int result = test.SingleNumber(nums1);
+Console.WriteLine(result);
+
+
 
 
 

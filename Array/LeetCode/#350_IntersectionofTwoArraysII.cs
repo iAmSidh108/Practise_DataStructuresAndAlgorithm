@@ -4,12 +4,12 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Array
+namespace Array.LeetCode
 {
     internal class _350_IntersectionofTwoArraysII
     {
 
-        
+
 
         public int[] Intersect(int[] nums1, int[] nums2)
         {

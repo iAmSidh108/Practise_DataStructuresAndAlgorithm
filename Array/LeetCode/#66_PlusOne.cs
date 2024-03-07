@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Array
+namespace Array.LeetCode
 {
     public class _66_PlusOne
     {
@@ -36,7 +36,7 @@ namespace Array
 
             */
 
-            for (int i = digits.Length-1; i >= 0; i--)
+            for (int i = digits.Length - 1; i >= 0; i--)
             {
                 if (digits[i] < 9)
                 {
@@ -45,7 +45,7 @@ namespace Array
                 }
                 digits[i] = 0;
             }
-            System.Array.Resize(ref digits, digits.Length+1);
+            System.Array.Resize(ref digits, digits.Length + 1);
             digits[0] = 1;
             return digits;
 
