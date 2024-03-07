@@ -10,7 +10,7 @@ namespace Array
     {
         public int[] PlusOne(int[] digits)
         {
-            var result = new List<int>();
+            /*var result = new List<int>();
 
             var carry = 1;
             var value = 0;
@@ -33,6 +33,22 @@ namespace Array
                 result.Insert(0, carry);
 
             return result.ToArray();
+
+            */
+
+            for (int i = digits.Length-1; i >= 0; i--)
+            {
+                if (digits[i] < 9)
+                {
+                    digits[i]++;
+                    return digits;
+                }
+                digits[i] = 0;
+            }
+            System.Array.Resize(ref digits, digits.Length+1);
+            digits[0] = 1;
+            return digits;
+
         }
     }
 }
