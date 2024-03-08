@@ -1,4 +1,6 @@
 ﻿using Array.LeetCode;
+using System.Globalization;
+using System.Xml.Linq;
 
 //int arrayLength = 10; // Define the length of the array
 //int[] array = new int[arrayLength];
@@ -107,14 +109,19 @@
 //bool result = test.ContainsDuplicate(nums);
 //Console.WriteLine(result);
 
-//Leetcode Question number:- 88. Merge Sorted Array
-int[] nums1 = [1, 2, 3, 0, 0, 0];
-int[] nums2 = [2, 5, 6];
-int m = 3;
-int n = 3;
-_88_MergeSortedArray test=new _88_MergeSortedArray();
-test.Merge(nums1,m, nums2,n);
+////Leetcode Question number:- 88. Merge Sorted Array
+//int[] nums1 = [1, 2, 3, 0, 0, 0];
+//int[] nums2 = [2, 5, 6];
+//int m = 3;
+//int n = 3;
+//_88_MergeSortedArray test=new _88_MergeSortedArray();
+//test.Merge(nums1,m, nums2,n);
 
+//Leetcode Question number:-169.Majority Element
+_169_MajorityElement test=new _169_MajorityElement();
+int[] nums = [2, 2, 1, 1, 1, 2, 2];
+int result = test.MajorityElement(nums);
+Console.WriteLine(result);
 
 
 
