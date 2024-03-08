@@ -117,11 +117,31 @@ using System.Xml.Linq;
 //_88_MergeSortedArray test=new _88_MergeSortedArray();
 //test.Merge(nums1,m, nums2,n);
 
-//Leetcode Question number:-169.Majority Element
-_169_MajorityElement test=new _169_MajorityElement();
-int[] nums = [2, 2, 1, 1, 1, 2, 2];
-int result = test.MajorityElement(nums);
+////Leetcode Question number:- 169.Majority Element
+//_169_MajorityElement test=new _169_MajorityElement();
+//int[] nums = [2, 2, 1, 1, 1, 2, 2];
+//int result = test.MajorityElement(nums);
+//Console.WriteLine(result);
+
+////Leetcode Question number:- 121. Best Time to Buy and Sell Stock
+//_121_BestTimetoBuyandSellStock test=new _121_BestTimetoBuyandSellStock();
+//int[] prices = [7, 1, 5, 3, 6, 4];
+//int result= test.MaxProfit(prices);
+//Console.WriteLine(result);
+
+//Leetcode Question number:-35. Search Insert Position
+_35_SearchInsertPosition test=new _35_SearchInsertPosition();
+int[] nums = [1, 3, 5, 6]; 
+int target = 5;
+int result = test.SearchInsert(nums,target);
 Console.WriteLine(result);
+
+
+
+
+
+
+
 
 
 
