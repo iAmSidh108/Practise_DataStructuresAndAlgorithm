@@ -101,11 +101,19 @@
 //int result = test.MissingNumber(nums);
 //Console.WriteLine(result);
 
-//Leetcode Question number:-217. Contains Duplicate
-int[] nums = [1, 1, 1, 3, 3, 4, 3, 2, 4, 2];
-_217_Contains_Duplicate test=new _217_Contains_Duplicate();
-bool result = test.ContainsDuplicate(nums);
-Console.WriteLine(result);
+////Leetcode Question number:- 217. Contains Duplicate
+//int[] nums = [1, 1, 1, 3, 3, 4, 3, 2, 4, 2];
+//_217_Contains_Duplicate test=new _217_Contains_Duplicate();
+//bool result = test.ContainsDuplicate(nums);
+//Console.WriteLine(result);
+
+//Leetcode Question number:- 88. Merge Sorted Array
+int[] nums1 = [1, 2, 3, 0, 0, 0];
+int[] nums2 = [2, 5, 6];
+int m = 3;
+int n = 3;
+_88_MergeSortedArray test=new _88_MergeSortedArray();
+test.Merge(nums1,m, nums2,n);
 
 
 
