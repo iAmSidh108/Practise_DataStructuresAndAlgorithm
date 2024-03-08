@@ -86,14 +86,20 @@
 //int result = test.SingleNumber(nums1);
 //Console.WriteLine(result);
 
-//Leetcode Question number:- 283.Move Zeroes
-int[] nums = [0, 1, 0, 3, 12];
-_283_Move_Zeroes test=new _283_Move_Zeroes();
-int[] newArray = test.MoveZeroes(nums);
-foreach(int i in newArray)
-{
-    Console.WriteLine(i);
-}
+////Leetcode Question number:- 283.Move Zeroes
+//int[] nums = [0, 1, 0, 3, 12];
+//_283_Move_Zeroes test=new _283_Move_Zeroes();
+//int[] newArray = test.MoveZeroes(nums);
+//foreach(int i in newArray)
+//{
+//    Console.WriteLine(i);
+//}
+
+//Leetcode Question number:- 268. Missing Number
+int[] nums = [3, 0, 1];
+_268_Missing_Number test=new _268_Missing_Number();
+int result = test.MissingNumber(nums);
+Console.WriteLine(result);
 
 
 
