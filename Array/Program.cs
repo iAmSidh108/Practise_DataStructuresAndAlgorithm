@@ -95,11 +95,18 @@
 //    Console.WriteLine(i);
 //}
 
-//Leetcode Question number:- 268. Missing Number
-int[] nums = [3, 0, 1];
-_268_Missing_Number test=new _268_Missing_Number();
-int result = test.MissingNumber(nums);
+////Leetcode Question number:- 268. Missing Number
+//int[] nums = [3, 0, 1];
+//_268_Missing_Number test=new _268_Missing_Number();
+//int result = test.MissingNumber(nums);
+//Console.WriteLine(result);
+
+//Leetcode Question number:-217. Contains Duplicate
+int[] nums = [1, 1, 1, 3, 3, 4, 3, 2, 4, 2];
+_217_Contains_Duplicate test=new _217_Contains_Duplicate();
+bool result = test.ContainsDuplicate(nums);
 Console.WriteLine(result);
+
 
 
 
