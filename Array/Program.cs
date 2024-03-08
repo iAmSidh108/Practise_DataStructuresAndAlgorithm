@@ -80,11 +80,20 @@
 //    Console.Write(x+" ");
 //}
 
-//Leetcode Question number #136 Single Number
-int[] nums1 = [4, 1, 2, 1, 2];
-_136_SingleNumber test=new _136_SingleNumber();
-int result = test.SingleNumber(nums1);
-Console.WriteLine(result);
+////Leetcode Question number #136 Single Number
+//int[] nums1 = [4, 1, 2, 1, 2];
+//_136_SingleNumber test=new _136_SingleNumber();
+//int result = test.SingleNumber(nums1);
+//Console.WriteLine(result);
+
+//Leetcode Question number:- 283.Move Zeroes
+int[] nums = [0, 1, 0, 3, 12];
+_283_Move_Zeroes test=new _283_Move_Zeroes();
+int[] newArray = test.MoveZeroes(nums);
+foreach(int i in newArray)
+{
+    Console.WriteLine(i);
+}
 
 
 
