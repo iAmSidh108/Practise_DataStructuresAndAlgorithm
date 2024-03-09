@@ -129,12 +129,19 @@ using System.Xml.Linq;
 //int result= test.MaxProfit(prices);
 //Console.WriteLine(result);
 
-//Leetcode Question number:-35. Search Insert Position
-_35_SearchInsertPosition test=new _35_SearchInsertPosition();
-int[] nums = [1, 3, 5, 6]; 
-int target = 5;
-int result = test.SearchInsert(nums,target);
-Console.WriteLine(result);
+////Leetcode Question number:-35. Search Insert Position
+//_35_SearchInsertPosition test=new _35_SearchInsertPosition();
+//int[] nums = [1, 3, 5, 6]; 
+//int target = 5;
+//int result = test.SearchInsert(nums,target);
+//Console.WriteLine(result);
+
+//Leetcode Question number:- 2540. Minimum Common Value
+_2540_MinimumCommonValue test=new _2540_MinimumCommonValue();
+int[] nums1 = [1, 2, 3]; 
+int[] nums2 = [2, 4];
+Console.WriteLine(test.GetCommon(nums1,nums2));
+
 
 
 
