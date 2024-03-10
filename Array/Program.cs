@@ -136,11 +136,16 @@ using System.Xml.Linq;
 //int result = test.SearchInsert(nums,target);
 //Console.WriteLine(result);
 
-//Leetcode Question number:- 2540. Minimum Common Value
-_2540_MinimumCommonValue test=new _2540_MinimumCommonValue();
-int[] nums1 = [1, 2, 3]; 
-int[] nums2 = [2, 4];
-Console.WriteLine(test.GetCommon(nums1,nums2));
+////Leetcode Question number:- 2540. Minimum Common Value
+//_2540_MinimumCommonValue test=new _2540_MinimumCommonValue();
+//int[] nums1 = [1, 2, 3]; 
+//int[] nums2 = [2, 4];
+//Console.WriteLine(test.GetCommon(nums1,nums2));
+//int[] newt=new int[nums1.Length];
+
+//Leetcode Question number:- 204.Count Primes
+_204_CountPrimes test=new _204_CountPrimes();
+Console.WriteLine(test.CountPrimes(10));
 
 
 
