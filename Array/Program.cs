@@ -143,9 +143,17 @@ using System.Xml.Linq;
 //Console.WriteLine(test.GetCommon(nums1,nums2));
 //int[] newt=new int[nums1.Length];
 
-//Leetcode Question number:- 204.Count Primes
-_204_CountPrimes test=new _204_CountPrimes();
-Console.WriteLine(test.CountPrimes(10));
+////Leetcode Question number:- 204.Count Primes
+//_204_CountPrimes test=new _204_CountPrimes();
+//Console.WriteLine(test.CountPrimes(10));
+
+_349_IntersectionOfTwoArrays test=new _349_IntersectionOfTwoArrays();
+int[] nums1 = [4, 9, 5]; int[] nums2 = [9, 4, 9, 8, 4];
+int[] result = test.Intersection(nums1, nums2);
+foreach(int i in result)
+{
+    Console.WriteLine(i);
+}
 
 
 
