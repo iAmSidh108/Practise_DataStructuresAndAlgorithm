@@ -2,7 +2,7 @@
 using System.Collections;
 using System.Security.Cryptography;
 
-namespace Array
+namespace Array.BasicOperations
 {
     public class ArrayFunctions
     {
@@ -193,7 +193,7 @@ namespace Array
             }
             return -1;
 
-            
+
         }
 
         public void BinarySearchResult(int result)
@@ -206,9 +206,9 @@ namespace Array
             {
                 Console.WriteLine($"Elements found at {result} index.\n");
             }
-        } 
+        }
 
-        
+
 
 
     }

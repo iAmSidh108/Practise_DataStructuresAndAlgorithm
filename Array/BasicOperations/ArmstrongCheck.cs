@@ -4,21 +4,21 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Array
+namespace Array.BasicOperations
 {
     public class ArmstrongCheck
     {
-        public void ArmstrongCheckFunction(int numberToCheck) 
+        public void ArmstrongCheckFunction(int numberToCheck)
         {
-            int temp=numberToCheck;
+            int temp = numberToCheck;
             int sum = 0;
 
-            while (temp>0)
+            while (temp > 0)
             {
                 int lastDigit = temp % 10;
                 temp /= 10;
-                sum += lastDigit*lastDigit*lastDigit;
-                
+                sum += lastDigit * lastDigit * lastDigit;
+
             }
 
             if (sum == numberToCheck)

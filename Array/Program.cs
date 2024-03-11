@@ -1,58 +1,57 @@
 ﻿using Array.LeetCode;
-using System.Globalization;
-using System.Xml.Linq;
+using Array.BasicOperations;
 
-//int arrayLength = 10; // Define the length of the array
-//int[] array = new int[arrayLength];
-//int filledElements = 7; // Example: assume 7 elements are already filled
+int arrayLength = 10; // Define the length of the array
+int[] array = new int[arrayLength];
+int filledElements = 7; // Example: assume 7 elements are already filled
 
 
-//List<int> list = new List<int>();
-//// Populate the array with some initial values
-//for (int i = 0; i < filledElements; i++)
-//{
-//    Console.Write($" Enter {filledElements} elements.");
-//    array[i] = int.Parse(Console.ReadLine()); // Filling the array with values 1, 2, 3, 4, 5
-//}
+List<int> list = new List<int>();
+// Populate the array with some initial values
+for (int i = 0; i < filledElements; i++)
+{
+    Console.Write($" Enter {filledElements} elements.");
+    array[i] = int.Parse(Console.ReadLine());          // Filling the array with values 1, 2, 3, 4, 5
+}
 
-//ArrayFunctions functions = new ArrayFunctions();
+ArrayFunctions functions = new ArrayFunctions();
 
-//// Display the array before insertion
-//Console.WriteLine("Array before insertion:");
-//functions.PrintAllElemntsInAnArray(array);
+// Display the array before insertion
+Console.WriteLine("Array before insertion:");
+functions.PrintAllElemntsInAnArray(array);
 
-//// Insert an element at the 3rd index (index 2)
-//int elementToAdd = 10;
-//int insertIndex = 2;
+// Insert an element at the 3rd index (index 2)
+int elementToAdd = 10;
+int insertIndex = 2;
 
-//functions.InsertElementAtIndex(array, insertIndex, elementToAdd, ref filledElements);
+functions.InsertElementAtIndex(array, insertIndex, elementToAdd, ref filledElements);
 
-////Delete element at index n
-//functions.DeleteElementAtIndex(array, 4, ref filledElements);
+//Delete element at index n
+functions.DeleteElementAtIndex(array, 4, ref filledElements);
 
-////Binary Searching an array
-//functions.LinearSearch(array, 6);
+//Binary Searching an array
+functions.LinearSearch(array, 6);
 
-////Arranging/Sortng eleements in Ascending
-//functions.BubbleSortElementsinAscending(array, ref filledElements);
+//Arranging/Sortng eleements in Ascending
+functions.BubbleSortElementsinAscending(array, ref filledElements);
 
-////Arranging/Sortng eleements in Descending
-//functions.BubbleSortElementsinDescending(array, ref filledElements);
+//Arranging/Sortng eleements in Descending
+functions.BubbleSortElementsinDescending(array, ref filledElements);
 
-////Binary Search
-//int result = functions.BinarySearch(array, ref filledElements, 10);
-//functions.BinarySearchResult(result);
+//Binary Search
+int result = functions.BinarySearch(array, ref filledElements, 10);
+functions.BinarySearchResult(result);
 
-//Console.WriteLine("Enter the number you want to check for Palindrome and Armstrong number");
-//int numToCheck= int.Parse(Console.ReadLine());
+Console.WriteLine("Enter the number you want to check for Palindrome and Armstrong number");
+int numToCheck = int.Parse(Console.ReadLine());
 
-////Palindrome Check
-//PalindromeCheck palindromeCheck = new PalindromeCheck();
-//palindromeCheck.PalindromeCheckFunction(numToCheck);
+//Palindrome Check
+PalindromeCheck palindromeCheck = new PalindromeCheck();
+palindromeCheck.PalindromeCheckFunction(numToCheck);
 
-////Armstrong Check
-//ArmstrongCheck armstrongCheck = new ArmstrongCheck();
-//armstrongCheck.ArmstrongCheckFunction(numToCheck);
+//Armstrong Check
+ArmstrongCheck armstrongCheck = new ArmstrongCheck();
+armstrongCheck.ArmstrongCheckFunction(numToCheck);
 
 
 // Leetcode Question no 66
@@ -147,13 +146,13 @@ using System.Xml.Linq;
 //_204_CountPrimes test=new _204_CountPrimes();
 //Console.WriteLine(test.CountPrimes(10));
 
-_349_IntersectionOfTwoArrays test=new _349_IntersectionOfTwoArrays();
-int[] nums1 = [4, 9, 5]; int[] nums2 = [9, 4, 9, 8, 4];
-int[] result = test.Intersection(nums1, nums2);
-foreach(int i in result)
-{
-    Console.WriteLine(i);
-}
+//_349_IntersectionOfTwoArrays test=new _349_IntersectionOfTwoArrays();
+//int[] nums1 = [4, 9, 5]; int[] nums2 = [9, 4, 9, 8, 4];
+//int[] result = test.Intersection(nums1, nums2);
+//foreach(int i in result)
+//{
+//    Console.WriteLine(i);
+//}
 
 
 
