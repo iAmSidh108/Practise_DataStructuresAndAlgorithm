@@ -70,6 +70,36 @@ namespace LinkedList.BasicOperations
             return head;
         }
 
+        public SLL_Node InsertInBetween(SLL_Node head, int data, int index)
+        {
+            SLL_Node newNode = CreateSLL(data);
+
+            if (head == null)
+            {
+                // If the linked list is empty, the new node becomes the head
+                head = newNode;
+            }
+            else
+            {
+                SLL_Node current = head;
+                int i = 0;
+
+                // Traverse to the end of the linked list
+                while (i != index-1 && current != null)
+                {
+                    current = current.next;
+                    i++;
+                }
+
+                // Insert the new node at the end
+                newNode.next = current.next;
+                current.next = newNode;
+            }
+            Console.WriteLine($"\n The {data} is added at the {index} index of LinkedList.");
+            TraverseNodes(head);
+            return head;
+        }
+
 
     }
 }
