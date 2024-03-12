@@ -171,7 +171,35 @@ namespace LinkedList.BasicOperations
             return head;
         }
 
+        public SLL_Node DeleteAtAnIndex(SLL_Node head, int index)
+        {
+            if(index<0)
+            {
+                Console.WriteLine("Enter a valid index greater than 0.");
+                
 
+            }
+            else if (index == 0)
+            {
+                head = head.next;
+                
+            }
+            else
+            {
+                SLL_Node tempPointer = head;
+                for(int i=0; i<index-1 && tempPointer!=null; i++)
+                {
+                    tempPointer = tempPointer.next;
+                }
+
+                tempPointer.next = tempPointer.next.next;
+
+            }
+            Console.WriteLine($"\n Deleted node at {index} index.");
+            TraverseNodes(head);
+
+            return head;
+        }
 
         #endregion
 

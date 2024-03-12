@@ -38,5 +38,8 @@ SLL_Node newHead8= test.DeleteFirstNode(newHead7);
 //Delete at last node
 SLL_Node newHead9 = test.DeleteLastNode(newHead8);
 
+//Delete at an index
+SLL_Node newNode10 = test.DeleteAtAnIndex(newHead9, 3);
+
 
 
