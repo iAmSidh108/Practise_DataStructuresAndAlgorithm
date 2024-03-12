@@ -17,7 +17,7 @@ namespace LinkedList.BasicOperations
         }
 
 
-        #region Insertion
+        
 
         public void TraverseNodes(SLL_Node head)
         {
@@ -33,6 +33,7 @@ namespace LinkedList.BasicOperations
             }
         }
 
+        #region Insertion
         public SLL_Node InsertAtFront(SLL_Node head, int data)
         {
 
@@ -104,11 +105,11 @@ namespace LinkedList.BasicOperations
             return head;
         }
 
-        public void InsertAfterNode(SLL_Node previousNode, int data)
+        public SLL_Node InsertAfterNode(SLL_Node previousNode,SLL_Node head, int data)
         {
             if (previousNode == null)
             {
-                return;
+                Console.WriteLine("LinkedList is empty.");
             }
             else
             {
@@ -118,10 +119,34 @@ namespace LinkedList.BasicOperations
                 previousNode.next = newNode;
 
                 Console.WriteLine($"\n The {data} is added after the given previous index of LinkedList.");
-
+                TraverseNodes(head);
             }
-
+            return head;
         }
+
+        #endregion
+
+        #region Deletion
+        public SLL_Node DeleteFirstNode(SLL_Node head)
+        {
+            if (head == null)
+            {
+                Console.WriteLine("The linkedList is empty");
+            }
+            else
+            {
+                head=head.next;
+            }
+            Console.WriteLine("\n Deleted First node.");
+            TraverseNodes(head);
+            
+
+            return head;
+        }
+
+        
+
+
 
         #endregion
 
