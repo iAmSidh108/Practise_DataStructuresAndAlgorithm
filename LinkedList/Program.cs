@@ -24,5 +24,8 @@ SLL_Node newHead4 = test.InsertAtFront(newHead3, 36);
 
 SLL_Node newHead5 = test.InsertAtEnd(newHead4, 50);
 
-SLL_Node newHead6 = test.InsertInBetween(newHead5, 70, 3);
+SLL_Node newHead6 = test.InsertAtAnIndex(newHead5, 70, 3);
+
+test.InsertAfterNode(newHead, 99);
+test.TraverseNodes(newHead5);
 

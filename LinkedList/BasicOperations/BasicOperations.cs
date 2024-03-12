@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Reflection;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -14,6 +15,9 @@ namespace LinkedList.BasicOperations
             
             return test;
         }
+
+
+        #region Insertion
 
         public void TraverseNodes(SLL_Node head)
         {
@@ -70,7 +74,7 @@ namespace LinkedList.BasicOperations
             return head;
         }
 
-        public SLL_Node InsertInBetween(SLL_Node head, int data, int index)
+        public SLL_Node InsertAtAnIndex(SLL_Node head, int data, int index)
         {
             SLL_Node newNode = CreateSLL(data);
 
@@ -100,6 +104,26 @@ namespace LinkedList.BasicOperations
             return head;
         }
 
+        public void InsertAfterNode(SLL_Node previousNode, int data)
+        {
+            if (previousNode == null)
+            {
+                return;
+            }
+            else
+            {
+                SLL_Node newNode = CreateSLL(data);
+
+                newNode.next = previousNode.next;
+                previousNode.next = newNode;
+
+                Console.WriteLine($"\n The {data} is added after the given previous index of LinkedList.");
+
+            }
+
+        }
+
+        #endregion
 
     }
 }
