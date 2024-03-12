@@ -42,6 +42,34 @@ namespace LinkedList.BasicOperations
 
         }
 
+        public SLL_Node InsertAtEnd(SLL_Node head, int data)
+        {
+
+            SLL_Node newNode = CreateSLL(data);
+
+            if (head == null)
+            {
+                // If the linked list is empty, the new node becomes the head
+                head = newNode;
+            }
+            else
+            {
+                SLL_Node current = head;
+
+                // Traverse to the end of the linked list
+                while (current.next != null)
+                {
+                    current = current.next;
+                }
+
+                // Insert the new node at the end
+                current.next = newNode;
+            }
+            Console.WriteLine($"\n The {data} is added at the end of LinkedList.");
+            TraverseNodes(head);
+            return head;
+        }
+
 
     }
 }
