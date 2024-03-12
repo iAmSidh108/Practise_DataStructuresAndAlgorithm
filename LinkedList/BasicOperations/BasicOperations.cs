@@ -144,7 +144,32 @@ namespace LinkedList.BasicOperations
             return head;
         }
 
-        
+        public SLL_Node DeleteLastNode(SLL_Node head)
+        {
+            if (head == null)
+            {
+                Console.WriteLine("The linkedList is empty");
+            }
+            else if (head.next==null)
+            {
+                head = null;
+            }
+            else
+            {
+                SLL_Node current = head;
+                while (current.next.next != null)
+                {
+                    current = current.next;
+                }
+
+                current.next = null;
+            }
+
+            Console.WriteLine("\n Deleted Last node.");
+            TraverseNodes(head);
+
+            return head;
+        }
 
 
 
