@@ -16,3 +16,9 @@ fourth.next = null;
 
 //Traversal and Show the value of data of LinkedList
 test.TraverseNodes(head);
+
+SLL_Node newHead = test.InsertAtFront(head, 12);
+SLL_Node newHead2 = test.InsertAtFront(newHead, 14);
+SLL_Node newHead3 = test.InsertAtFront(newHead2, 21);
+SLL_Node newHead4 = test.InsertAtFront(newHead3, 36);
+
