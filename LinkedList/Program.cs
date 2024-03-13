@@ -50,3 +50,6 @@ test.TraverseNodes(newNode12);
 
 //Reverse the linkedLIst
 SLL_Node newNode13 = test.ReverseTheLinkedList(newNode12);
+
+//Search the LinkedLIst for the given value
+test.Search(newNode13, 70);

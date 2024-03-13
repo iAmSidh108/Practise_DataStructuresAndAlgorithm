@@ -261,5 +261,26 @@ namespace LinkedList.BasicOperations
 
         }
 
+        public bool Search(SLL_Node head, int value)
+        {
+            SLL_Node current = head;
+            while (current != null)
+            {
+                if(current.GetValue() == value)
+                {
+                    Console.WriteLine($"\n Element {value} Found");
+                    return true;
+
+                }
+
+                current=current.next;
+            }
+
+            Console.WriteLine($"\n Element {value} not Found");
+            return false;
+
+            
+        }
+
     }
 }
