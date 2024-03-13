@@ -46,5 +46,7 @@ SLL_Node newNode11 = test.DeleteNodeWithValue(newNode10, 99);
 
 //Delete node with a value 7(it doesnot exist)
 SLL_Node newNode12 = test.DeleteNodeWithValue(newNode11, 7);
-
 test.TraverseNodes(newNode12);
+
+//Reverse the linkedLIst
+SLL_Node newNode13 = test.ReverseTheLinkedList(newNode12);

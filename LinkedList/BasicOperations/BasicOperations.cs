@@ -4,6 +4,7 @@ using System.Linq;
 using System.Reflection;
 using System.Text;
 using System.Threading.Tasks;
+using System.Xml.Linq;
 
 namespace LinkedList.BasicOperations
 {
@@ -15,9 +16,6 @@ namespace LinkedList.BasicOperations
             
             return test;
         }
-
-
-        
 
         public void TraverseNodes(SLL_Node head)
         {
@@ -239,6 +237,29 @@ namespace LinkedList.BasicOperations
         }
 
         #endregion
+
+        public SLL_Node ReverseTheLinkedList(SLL_Node head)
+        {
+            SLL_Node prev = null;
+            SLL_Node current = head;
+            SLL_Node temp = null;
+
+            while (current != null)
+            {
+                temp = current.next;
+                current.next = prev;
+                prev = current;
+                current = temp;
+            }
+
+            head = prev;
+
+            Console.WriteLine("\n Congrats, the linkedList has been reversed.");
+            TraverseNodes(head);
+            return head;
+
+
+        }
 
     }
 }
