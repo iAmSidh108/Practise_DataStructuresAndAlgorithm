@@ -22,5 +22,10 @@ namespace LinkedList.BasicOperations
             return value;
         }
 
+        public void SetValue(int _value)
+        {
+            this.value = _value;
+        }
+
     }
 }

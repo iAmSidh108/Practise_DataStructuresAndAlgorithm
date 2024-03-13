@@ -282,5 +282,35 @@ namespace LinkedList.BasicOperations
             
         }
 
+        public SLL_Node SortAscending(SLL_Node head)
+        {
+            List<int> tempList=new List<int>();
+
+            SLL_Node temp = head;
+            while (temp.next != null)
+            {
+                tempList.Add(temp.GetValue());
+                temp = temp.next;
+            }
+
+            tempList.Sort();
+
+            int i = 0; 
+            temp = head;
+
+            while (temp.next != null)
+            {
+                temp.SetValue(tempList[i]);
+                i++;
+                temp = temp.next;
+            }
+
+            Console.WriteLine("\n Congrats, the linkedList has been sorted in ascending order.");
+            TraverseNodes(head);
+            return head;
+
+            
+        }
+
     }
 }
