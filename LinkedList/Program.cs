@@ -41,5 +41,10 @@ SLL_Node newHead9 = test.DeleteLastNode(newHead8);
 //Delete at an index
 SLL_Node newNode10 = test.DeleteAtAnIndex(newHead9, 3);
 
+//Delete node with a value 99(it exists)
+SLL_Node newNode11 = test.DeleteNodeWithValue(newNode10, 99);
 
+//Delete node with a value 7(it doesnot exist)
+SLL_Node newNode12 = test.DeleteNodeWithValue(newNode11, 7);
 
+test.TraverseNodes(newNode12);

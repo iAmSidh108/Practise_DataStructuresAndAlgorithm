@@ -201,6 +201,43 @@ namespace LinkedList.BasicOperations
             return head;
         }
 
+        public SLL_Node DeleteNodeWithValue(SLL_Node head, int value)
+        {
+            if (head == null)
+            {
+                Console.WriteLine("The linkedList is empty");
+            }
+            else if (head.next == null)
+            {
+                head = null;
+            }
+            else
+            {
+                SLL_Node p = head;
+                SLL_Node q = head.next;
+
+                while(q.GetValue() != value && q.next != null)
+                {
+                    p = p.next;
+                    q = q.next;
+                }
+
+                if (q.GetValue() == value)
+                {
+                    p.next = q.next;
+                    Console.WriteLine($"\n The value {value} has been removed from the list.");
+
+                }
+                else
+                {
+                    Console.WriteLine($"\n The value {value} doesn't exist.");
+                }
+                
+            }
+            return head;
+
+        }
+
         #endregion
 
     }
