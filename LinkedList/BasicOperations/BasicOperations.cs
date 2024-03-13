@@ -287,7 +287,7 @@ namespace LinkedList.BasicOperations
             List<int> tempList=new List<int>();
 
             SLL_Node temp = head;
-            while (temp.next != null)
+            while (temp != null)
             {
                 tempList.Add(temp.GetValue());
                 temp = temp.next;
@@ -298,7 +298,7 @@ namespace LinkedList.BasicOperations
             int i = 0; 
             temp = head;
 
-            while (temp.next != null)
+            while (temp != null)
             {
                 temp.SetValue(tempList[i]);
                 i++;
