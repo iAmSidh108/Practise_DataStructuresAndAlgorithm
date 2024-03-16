@@ -13,3 +13,12 @@ head.next = second;
 second.next = third;
 third.next = fourth;
 fourth.next = null;
+
+//Linking the nodes backward
+fourth.prev = third;
+third.prev = second;
+second.prev = head;
+head.prev = null;
+
+test.TraverseNodesForward(head);
+test.TraverseNodesBackward(fourth);
