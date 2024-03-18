@@ -1,2 +1,10 @@
-﻿// See https://aka.ms/new-console-template for more information
-Console.WriteLine("Hello, World!");
+﻿using StackUsingArray;
+
+ArrayStack stack = new ArrayStack(10);
+
+bool result = stack.IsEmpty();
+Console.WriteLine(result);
+
+result = stack.IsFull();
+Console.WriteLine(result);
+
