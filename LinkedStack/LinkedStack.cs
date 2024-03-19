@@ -87,12 +87,34 @@
 
         public void StackTop()
         {
+            if (IsEmpty())
+            {
+                Console.WriteLine("No stack Top vakue exists as it is empty.");
+            }
 
+            else
+                Console.WriteLine("The stackTop value is: " + top.GetDataValue());
         }
 
         public void StackBottom()
         {
 
+            if (IsEmpty())
+            {
+                Console.WriteLine("No stack Top vakue exists as it is empty.");
+                return;
+            }
+            else
+            {
+                StackNode temp = top;
+                while (temp.next != null)
+                {
+                    temp = temp.next;
+                }
+
+                Console.WriteLine("The stackBottomValue is: " + temp.GetDataValue());
+            }
+            
         }
     }
 }

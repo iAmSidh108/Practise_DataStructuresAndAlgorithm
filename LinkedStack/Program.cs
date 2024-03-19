@@ -17,3 +17,6 @@ stack.Peek();
 stack.Pop();
 stack.Traverse();
 stack.Peek();
+
+stack.StackTop();
+stack.StackBottom();
