@@ -3,7 +3,7 @@
     public class StackNode
     {
         int data;
-        StackNode next;
+        internal StackNode next;
 
         public StackNode(int data)
         {

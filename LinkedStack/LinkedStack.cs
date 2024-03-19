@@ -14,9 +14,11 @@
 
             else
             {
-                while (top != null)
+                StackNode temp = top;
+                while (temp != null)
                 {
-                    Console.Write(top.GetDataValue() + " ");
+                    Console.Write(temp.GetDataValue() + " ");
+                    temp = temp.next;
                 }
             }
         }
@@ -44,19 +46,43 @@
             }
         }
 
-        public void Push()
+        public void Push(int value)
         {
+            if (IsFull())
+                return;
 
+            else
+            {
+                StackNode nodeToAdd= new StackNode(value);
+                nodeToAdd.next= top;
+                top=nodeToAdd;
+                Console.WriteLine(value +" has been added to the stack.");
+            }
         }
 
         public void Pop()
         {
+            if (IsEmpty())
+                return;
 
+            else
+            {
+                int poppedData = top.GetDataValue();
+                top = top.next;
+                Console.WriteLine("\n "+poppedData+" has been popped.");
+            }
         }
 
         public void Peek()
         {
-
+            if (IsEmpty())
+            {
+                Console.WriteLine("Can't peek as the stack is empty.");
+            }
+            else
+            {
+                Console.WriteLine("The value on top is: "+top.GetDataValue());
+            }
         }
 
         public void StackTop()

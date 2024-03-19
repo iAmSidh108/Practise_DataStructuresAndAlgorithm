@@ -1,7 +1,19 @@
 ﻿using StackUsingLinkedList.LinkedStack;
 
-LinkedStack test = new LinkedStack();
+LinkedStack stack = new LinkedStack();
 
-Console.WriteLine("Stack is empty: "+ test.IsEmpty());
-test.Traverse();
-test.Clear();
+//Console.WriteLine("Stack is empty: "+ stack.IsEmpty());
+//stack.Traverse();
+//stack.Clear();
+
+stack.Push(5);
+stack.Push(10);
+stack.Push(7);
+stack.Push(11);
+
+stack.Traverse();
+stack.Peek();
+
+stack.Pop();
+stack.Traverse();
+stack.Peek();
