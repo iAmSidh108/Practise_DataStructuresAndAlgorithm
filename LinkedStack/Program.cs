@@ -1,2 +1,7 @@
-﻿// See https://aka.ms/new-console-template for more information
-Console.WriteLine("Hello, World!");
+﻿using StackUsingLinkedList.LinkedStack;
+
+LinkedStack test = new LinkedStack();
+
+Console.WriteLine("Stack is empty: "+ test.IsEmpty());
+test.Traverse();
+test.Clear();
