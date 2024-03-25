@@ -31,7 +31,7 @@ namespace Queue_Array
             else
             {
                 Console.WriteLine("The elements in queue currently are: ");
-                for (int i = 0; i <= rear; i++)
+                for (int i = front+1; i <= rear; i++)
                 {
                     Console.Write(array[i] + " ");
                 }
@@ -83,6 +83,18 @@ namespace Queue_Array
             }
             
         }
-        
+
+        public void PeekFront()
+        {
+            Console.WriteLine(array[front+1]);
+        }
+
+        public void PeekRear()
+        {
+            Console.WriteLine(array[rear]);
+        }
+
+
+
     }
 }

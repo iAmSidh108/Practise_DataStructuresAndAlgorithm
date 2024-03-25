@@ -20,6 +20,9 @@ queue.Enqueue(20);
 
 queue.Traverse();
 
+queue.PeekFront();
+queue.PeekRear();
+
 Console.WriteLine(queue.IsFull());
 Console.WriteLine(queue.IsEmpty());
 
