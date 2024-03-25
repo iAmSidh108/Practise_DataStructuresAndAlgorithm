@@ -12,6 +12,9 @@ linkedQueue.Enqueue(9);
 linkedQueue.Enqueue(1);
 linkedQueue.Enqueue(4);
 
+linkedQueue.PeekFront();
+linkedQueue.PeekRear();
+
 linkedQueue.Traverse();
 
 linkedQueue.Dequeue();
@@ -19,3 +22,6 @@ linkedQueue.Dequeue();
 linkedQueue.Dequeue();
 
 linkedQueue.Traverse();
+
+linkedQueue.PeekFront();
+linkedQueue.PeekRear();

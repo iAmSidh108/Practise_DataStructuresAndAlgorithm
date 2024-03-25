@@ -78,6 +78,28 @@ namespace Queue_Linked
             }
         }
 
+        public void PeekFront()
+        {
+            if (IsEmpty())
+            {
+                Console.WriteLine("Queue is empty. Cannot peek front.");
+                
+            }
 
+            Console.WriteLine($"Front element of the queue: {front.GetDataValue()}");
+            
+        }
+
+        public void PeekRear()
+        {
+            if (IsEmpty())
+            {
+                Console.WriteLine("Queue is empty. Cannot peek rear.");
+
+            }
+
+            Console.WriteLine($"Front element of the queue: {rear.GetDataValue()}");
+
+        }
     }
 }
