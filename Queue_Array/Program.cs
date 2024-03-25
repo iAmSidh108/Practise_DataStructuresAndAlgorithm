@@ -10,13 +10,18 @@ Console.WriteLine(queue.IsEmpty());
 //Here the queue is empty
 queue.Dequeue();
 
-//Here we will add 6 elements(So that we would trigger FullQueue)
+//Here we will add 5 elements,So that we would trigger FullQueue
+//(Size of Queue is 5 but we can only add 4 elements because 1 index is reserved for circular queue pointer)
 queue.Enqueue(5);
 queue.Enqueue(9);
 queue.Enqueue(1);
-queue.Enqueue(2);
-queue.Enqueue(15);
-queue.Enqueue(20);
+
+queue.Dequeue();
+queue.Dequeue();
+
+queue.Enqueue(12);
+queue.Enqueue(21);
+queue.Enqueue(3);
 
 queue.Traverse();
 
@@ -31,8 +36,8 @@ queue.Dequeue();
 queue.Dequeue();
 queue.Dequeue();
 queue.Dequeue();
-queue.Dequeue();
-queue.Dequeue();
+queue.Enqueue(3);
+
 
 Console.WriteLine(queue.IsFull());
 Console.WriteLine(queue.IsEmpty());

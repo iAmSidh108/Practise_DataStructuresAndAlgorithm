@@ -18,8 +18,8 @@ namespace Queue_Array
         {
             this.size = size;
             array= new int[size];
-            front = -1;
-            rear = -1;
+            front = 0;
+            rear = 0;
         }
 
         public void Traverse()
@@ -30,11 +30,15 @@ namespace Queue_Array
             }
             else
             {
+                int current = front+1;
                 Console.WriteLine("The elements in queue currently are: ");
-                for (int i = front+1; i <= rear; i++)
+                while (current != rear)
                 {
-                    Console.Write(array[i] + " ");
+                    Console.Write(array[current] + " ");
+                    current = (current + 1) % size;
                 }
+                Console.Write(array[current] + " "); // Print the last element
+
                 Console.WriteLine();
             }
             
@@ -42,12 +46,12 @@ namespace Queue_Array
 
         public bool IsEmpty()
         {
-            return rear == front;
+            return rear==front;
         }
 
         public bool IsFull()
         {
-            return rear == size - 1;
+            return (rear + 1) % size == front;
         }
 
         public void Enqueue(int element)
@@ -58,7 +62,7 @@ namespace Queue_Array
             }
             else
             {
-                rear++;
+                rear= (rear + 1) % size;
                 array[rear] = element;
 
                 Console.WriteLine($"The {element} has been added to Queue.");
@@ -77,7 +81,7 @@ namespace Queue_Array
             {
                 //int removedElement = array[front];
 
-                front++;
+                front = (front + 1) % size;
                 Console.WriteLine($"The element from front has been dequeued.");
                 
             }
