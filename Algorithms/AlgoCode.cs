@@ -18,6 +18,8 @@ namespace Algorithms
         {
             // Best Case= O(n)  = When array is sorted
             //Worst Case= O(n2) =When array is not sorted
+            //Stability: Stable
+            //Adaptability: Not adaptive
 
             int n =array.Length;
             bool isSorted = false;
@@ -50,6 +52,8 @@ namespace Algorithms
         {
             // Best Case= O(n)  = When array is sorted
             //Worst Case= O(n2) =When array is not sorted
+            //Stability: Stable
+            //Adaptability: Adaptive
 
             Console.WriteLine("\nElements before Traversal");
             Traverse();
@@ -103,14 +107,71 @@ namespace Algorithms
             Traverse();
         }
 
+        #region Quick Sort
         public void QuickSort()
         {
+            //Worst Case: O(n2)- When array is sorted already
+            //Best Case: O(nlogn)- When the pivot chosen is always the median element of the partitioned array
+            //Stability: Not Stable
+            //Adaptibility: Not Adaptive
+
             Console.WriteLine("\nElements before Traversal");
             Traverse();
 
+            QuickSortRecursive(array, 0, array.Length-1);
+
             Console.WriteLine("\nElements after Traversal using Quick Sort.");
             Traverse();
+
         }
+
+        void QuickSortRecursive(int[] A, int low, int high)
+        {
+            
+            int partitionIndex; // Index of pivot after partition
+
+            if (low < high)
+            {
+                partitionIndex = Partition(A, low, high);
+                QuickSortRecursive(A, low, partitionIndex - 1);  // sort left subarray 
+                QuickSortRecursive(A, partitionIndex + 1, high); // sort right subarray
+            }
+
+        }
+
+        int Partition(int[] A, int low, int high)
+        {
+            int pivot = A[low];
+            int i = low + 1;
+            int j = high;
+            int temp;
+
+            do
+            {
+                while (A[i] <= pivot)
+                {
+                    i++;
+                }
+
+                while (A[j] > pivot)
+                {
+                    j--;
+                }
+
+                if (i < j)
+                {
+                    temp = A[i];
+                    A[i] = A[j];
+                    A[j] = temp;
+                }
+            } while (i < j);
+
+
+            Swap(A,low, j);
+            return j;
+        }
+
+        #endregion
 
         public void Traverse()
         {
