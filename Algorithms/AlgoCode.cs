@@ -16,7 +16,10 @@ namespace Algorithms
 
         public void BubbleSort()
         {
-            int n=array.Length;
+            // Best Case= O(n)  = When array is sorted
+            //Worst Case= O(n2) =When array is not sorted
+
+            int n =array.Length;
             bool isSorted = false;
 
             Console.WriteLine("\nElements before Traversal");
@@ -30,10 +33,8 @@ namespace Algorithms
                 {
                     if (array[j] > array[j+1])
                     {
-                        int temp = array[j];
-                        array[j] = array[j+1];
-                        array[j+1] = temp;
-
+                        //Created this function below
+                        Swap(array, j, j + 1);
                         isSorted = false;
                     }
                 }
@@ -41,12 +42,15 @@ namespace Algorithms
                     return;
             }
 
-            Console.WriteLine("\nElements after Traversal using Bubble Sort");
+            Console.WriteLine("\nElements after Traversal using Bubble Sort.");
             Traverse();
         }
 
         public void InsertionSort()
         {
+            // Best Case= O(n)  = When array is sorted
+            //Worst Case= O(n2) =When array is not sorted
+
             Console.WriteLine("\nElements before Traversal");
             Traverse();
 
@@ -65,7 +69,46 @@ namespace Algorithms
                 array[j + 1] = key;
             }
 
-            Console.WriteLine("\nElements after Traversal using Insertion Sort");
+            Console.WriteLine("\nElements after Traversal using Insertion Sort.");
+            Traverse();
+        }
+
+        public void SelectionSort()
+        {
+            // Best Case= O(n2)  = When array is sorted
+            //Worst Case= O(n2) =When array is not sorted
+            //Not Stable
+            //Isn't Adaptive
+            //Sorting in minimum number of swap
+
+            Console.WriteLine("\nElements before Traversal");
+            Traverse();
+            int indexOfMin;
+            for (int i = 0; i < array.Length-1; i++)
+            {
+                indexOfMin = i;
+                for (int j = i+1; j < array.Length; j++)
+                {
+                    if (array[j] < array[indexOfMin])
+                    {
+                        indexOfMin = j;
+                    }
+                }
+
+                //Created this function below
+                Swap(array, indexOfMin, i);
+                
+            }
+            Console.WriteLine("\nElements after Traversal using Selection Sort.");
+            Traverse();
+        }
+
+        public void QuickSort()
+        {
+            Console.WriteLine("\nElements before Traversal");
+            Traverse();
+
+            Console.WriteLine("\nElements after Traversal using Quick Sort.");
             Traverse();
         }
 
@@ -76,6 +119,14 @@ namespace Algorithms
                 Console.Write(num+" ");
             }
             Console.WriteLine();
+        }
+
+        void Swap(int[] array, int firstIndex, int secondIndex)
+        {
+            int temp= array[firstIndex];
+            array[firstIndex]= array[secondIndex];
+            array[secondIndex]= temp;
+
         }
     }
 }

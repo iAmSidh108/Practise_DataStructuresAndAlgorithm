@@ -5,4 +5,8 @@ AlgoCode algo=new AlgoCode(array);
 
 //algo.BubbleSort();
 
-algo.InsertionSort();
+//algo.InsertionSort();
+
+//algo.SelectionSort();
+
+algo.QuickSort();
