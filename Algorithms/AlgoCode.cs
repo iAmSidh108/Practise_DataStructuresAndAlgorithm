@@ -172,10 +172,75 @@ namespace Algorithms
         }
 
         #endregion
-
         public void MergeSort()
         {
+            Console.WriteLine("The array before MergeSort");
+            Traverse(); // Assuming Traverse() prints the array elements
 
+            MergeSortRecursive(array, 0, array.Length - 1);
+
+            Console.WriteLine("The array after MergeSort");
+            Traverse();
+        }
+
+        void MergeSortRecursive(int[] newArray, int low, int high)
+        {
+            if (low < high)
+            {
+                int mid = (low + high) / 2;
+                MergeSortRecursive(newArray, low, mid);
+                MergeSortRecursive(newArray, mid + 1, high);
+                Merge(newArray, mid, low, high);
+            }
+        }
+
+        void Merge(int[] newArray, int mid, int low, int high)
+        {
+            int n1 = mid - low + 1; // Size of left subarray
+            int n2 = high - mid;    // Size of right subarray
+
+            int[] left = new int[n1];  // Create temporary arrays for subarrays
+            int[] right = new int[n2];
+
+            for (int a = 0; a < n1; a++)
+            {
+                left[a] = newArray[low + a];
+            }
+            for (int b = 0; b < n2; b++)
+            {
+                right[b] = newArray[mid + 1 + b];
+            }
+
+            // Merge the temporary arrays back into newArray
+            int i = 0, j = 0, k = low;
+            while (i < n1 && j < n2)
+            {
+                if (left[i] <= right[j])
+                {
+                    newArray[k] = left[i];
+                    i++;
+                }
+                else
+                {
+                    newArray[k] = right[j];
+                    j++;
+                }
+                k++;
+            }
+
+            // Copy the remaining elements (if any)
+            while (i < n1)
+            {
+                newArray[k] = left[i];
+                i++;
+                k++;
+            }
+            while (j < n2)
+            {
+                newArray[k] = right[j];
+                j++;
+                k++;
+            }
         }
 
         public void CountSort()

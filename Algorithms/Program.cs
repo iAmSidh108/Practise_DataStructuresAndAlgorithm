@@ -11,7 +11,7 @@ AlgoCode algo=new AlgoCode(array);
 
 //algo.QuickSort();
 
-//algo.MergeSort();
+algo.MergeSort();
 
-algo.CountSort();
+//algo.CountSort();
 
