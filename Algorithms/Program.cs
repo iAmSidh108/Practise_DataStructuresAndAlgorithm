@@ -9,4 +9,9 @@ AlgoCode algo=new AlgoCode(array);
 
 //algo.SelectionSort();
 
-algo.QuickSort();
+//algo.QuickSort();
+
+//algo.MergeSort();
+
+algo.CountSort();
+

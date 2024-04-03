@@ -173,6 +173,70 @@ namespace Algorithms
 
         #endregion
 
+        public void MergeSort()
+        {
+
+        }
+
+        public void CountSort()
+        {
+            //Time Complexity:
+            //Best Case: O(n + k)
+            //Worst Case: O(n + k)
+            //where n is size of array and k is max value of an array
+
+            //Space Complexity: O(n + k)
+            //Stability: Stable
+            //Adaptability: Not adaptive
+
+            Console.WriteLine("The array before CountSort");
+            Traverse();
+            
+            //Found max amount in the array
+            int max = ReturnMaxOfArray(array);
+            
+            //Created a new array with 1 index more than max value
+            int[] countArray=new int[max+1];
+
+            //Filled the value of each element of new array to 0
+            for (int i = 0; i < countArray.Length; i++)
+            {
+                countArray[i] = 0;
+            }
+
+            //Puting value at same index as of their value
+            for(int j=0; j < array.Length; j++)
+            {
+                int val = array[j];
+                countArray[val]++;
+            }
+
+
+            int k = 0;
+            int l = 0;
+            while (k < max + 1)
+            {
+                if (countArray[k] > 0)
+                {
+                    array[l] = k;
+                    countArray[k]--;
+                    l++;
+                }
+                else
+                {
+                    k++;
+                }
+                
+            }
+
+            Console.WriteLine("The array after CountSort");
+            Traverse();
+            
+
+
+        }
+
+        #region Utilities
         public void Traverse()
         {
             foreach (int num in array)
@@ -189,5 +253,18 @@ namespace Algorithms
             array[secondIndex]= temp;
 
         }
+
+        int ReturnMaxOfArray(int[] arrayToFind)
+        {
+            int max = int.MinValue;
+            foreach(var a in arrayToFind)
+            {
+                if (a > max)
+                    max = a;
+            }
+            return max;
+        }
+
+        #endregion
     }
 }
